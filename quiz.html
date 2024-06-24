@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah Pancasila - Kuis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #949296; /* Warna latar belakang ungu */
+            color: #333; /* Warna teks hitam */
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            text-align: center; /* Pusatkan elemen di dalam navigasi */
+        }
+        nav a {
+            display: inline-block; /* Ganti float dengan inline-block */
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .quiz {
+            background-color: #ffffff; /* Warna latar belakang konten putih */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .quiz h2 {
+            color: #0f0e0f; /* Warna judul kuis ungu tua */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .quiz-question {
+            margin-bottom: 10px;
+        }
+        .quiz-question p {
+            margin-bottom: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .leaderboard {
+            background-color: #ffffff; /* Warna latar belakang konten papan peringkat putih */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .leaderboard h2 {
+            color: #060606; /* Warna judul papan peringkat ungu tua */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .leaderboard table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .leaderboard th, .leaderboard td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .leaderboard th {
+            background-color: #6a6a6c; /* Warna latar belakang header kolom ungu tua */
+            color: white;
+        }
+        .leaderboard tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .delete-button {
+            background-color: #f44336; /* Warna latar belakang tombol hapus merah */
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .delete-button:hover {
+            background-color: #cc0000; /* Warna latar belakang tombol hapus merah gelap saat dihover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kuis Sejarah Pancasila</h1>
+</header>
+
+<nav>
+    <a href="index.html">Galeri Foto</a>
+    <a href="materi.html">Materi</a>
+    <a href="quiz.html">Kuis</a>
+    <a href="about.html">Tentang Kami</a>
+</nav>
+
+<div class="container">
+    <section class="quiz">
+        <h2>Kuis Sejarah Komputer</h2>
+        <form id="quizForm">
+            <div>
+                <label for="username">Masukkan Nama Anda:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="quiz-question">
+                <p>1. Siapa yang dipilih sebagai ketua pertama BPUPKI?</p>
+                <input type="radio" name="q1" value="a"> a. Dr. Kanjeng Raden Tumenggung Radjiman Wedyodiningrat<br>
+                <input type="radio" name="q1" value="b"> b. Mohammad Hatta<br>
+                <input type="radio" name="q1" value="c"> c. Soekarno<br>
+            </div>
+            <div class="quiz-question">
+                <p>2. Di mana lokasi sidang pertama BPUPKI diadakan?</p>
+                <input type="radio" name="q2" value="a"> a. Gedung Chuo Sangi In<br>
+                <input type="radio" name="q2" value="b"> b. Gedung Pancasila<br>
+                <input type="radio" name="q2" value="c"> c. Gedung Merdeka<br>
+            </div>
+            <div class="quiz-question">
+                <p>3. Siapa yang mengusulkan lima dasar untuk negara Indonesia dalam BPUPKI?</p>
+                <input type="radio" name="q3" value="a"> a. Mohammad Yamin<br>
+                <input type="radio" name="q3" value="b"> b. Soekarno<br>
+                <input type="radio" name="q3" value="c"> c. Mohammad Hatta<br>
+            </div>
+            <div class="quiz-question">
+                <p>4. Kapan Pancasila pertama kali diumumkan oleh Soekarno?</p>
+                <input type="radio" name="q4" value="a"> a. 1 Juni 1945<br>
+                <input type="radio" name="q4" value="b"> b. 29 Mei 1945<br>
+                <input type="radio" name="q4" value="c"> c. 22 Juni 1945<br>
+            </div>
+            <div class="quiz-question">
+                <p>5. Apa yang menjadi nama dokumen pertama yang mencatat rumusan Pancasila?</p>
+                <input type="radio" name="q5" value="a"> a. Piagam Jakarta<br>
+                <input type="radio" name="q5" value="b"> b. Pembukaan Undang-Undang Dasar 1945<br>
+                <input type="radio" name="q5" value="c"> c. Mukadimah Konstitusi Republik Indonesia Serikat<br>
+            </div>
+            <div class="quiz-question">
+                <p>6. Siapa saja anggota Panitia Sembilan yang membentuk rumusan Pancasila?</p>
+                <input type="radio" name="q6" value="a"> a. Soekarno, Mohammad Hatta, Abikoesno Tjokrosoejoso, Agus Salim, Wahid Hasjim, Mohammad Yamin, Abdul Kahar Muzakir, AA Maramis, Achmad Soebardjo<br>
+                <input type="radio" name="q6" value="b"> b. Mohammad Hatta, Soekarno, Mohammad Yamin<br>
+                <input type="radio" name="q6" value="c"> c. Soekarno, Mohammad Hatta, Abikoesno Tjokrosoejoso<br>
+            </div>
+            <div class="quiz-question">
+                <p>7. Kapan Pancasila disahkan sebagai dasar negara oleh PPKI?</p>
+                <input type="radio" name="q7" value="a"> a. 18 Agustus 1945<br>
+                <input type="radio" name="q7" value="b"> b. 1 Juni 1945<br>
+                <input type="radio" name="q7" value="c"> c. 22 Juni 1945<br>
+            </div>
+            <div class="quiz-question">
+                <p>8. Apa fungsi utama Pancasila sebagai dasar negara Indonesia?</p>
+                <input type="radio" name="q8" value="a"> a. Mengatur penyelenggaraan pemerintahan<br>
+                <input type="radio" name="q8" value="b"> b. Menjaga keutuhan wilayah<br>
+                <input type="radio" name="q8" value="c"> c. Mengembangkan ekonomi nasional<br>
+            </div>
+            <div class="quiz-question">
+                <p>9. Apa yang dimaksud dengan Pancasila sebagai pandangan hidup bangsa?</p>
+                <input type="radio" name="q9" value="a"> a. Pandangan hidup yang mencerminkan nilai-nilai sejarah<br>
+                <input type="radio" name="q9" value="b"> b. Pandangan hidup yang mengatur tata norma dan etika masyarakat<br>
+                <input type="radio" name="q9" value="c"> c. Pandangan hidup yang mencerminkan sikap dan perilaku sesuai dengan nilai-nilai Pancasila<br>
+            </div>
+            <div class="quiz-question">
+                <p>10. Mengapa Pancasila penting bagi bangsa Indonesia?</p>
+                <input type="radio" name="q10" value="a"> a. Sebagai dasar hukum yang mengatur kehidupan sosial<br>
+                <input type="radio" name="q10" value="b"> b. Sebagai ideologi negara untuk mewujudkan masyarakat adil dan makmur<br>
+                <input type="radio" name="q10" value="c"> c. Sebagai panduan dalam urusan internasional<br>
+            </div>            
+            <button type="submit">Submit</button>
+        </form>
+        <div id="quizResult" class="result"></div>
+    </section>
+</div>
+
+<script>
+    // Fungsi untuk menampilkan papan peringkat
+    function displayLeaderboard() {
+        const leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+
+        // Hapus konten papan peringkat sebelumnya jika ada
+        const leaderboardSection = document.querySelector('.leaderboard');
+        if (leaderboardSection) {
+            leaderboardSection.remove();
+        }
+
+        // Buat elemen tabel untuk papan peringkat
+        const leaderboardTable = document.createElement('table');
+        leaderboardTable.innerHTML = `
+            <tr>
+                <th>Peringkat</th>
+                <th>Nama</th>
+                <th>Skor</th>
+                <th>Aksi</th>
+            </tr>
+        `;
+
+        // Iterasi untuk setiap entri dalam papan peringkat
+        leaderboard.forEach((entry, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${entry.username}</td>
+                <td>${entry.score}</td>
+                <td><button class="delete-button" data-index="${index}">Hapus</button></td>
+            `;
+            leaderboardTable.appendChild(row);
+        });
+
+        // Buat elemen papan peringkat
+        const leaderboardSectionNew = document.createElement('section');
+        leaderboardSectionNew.classList.add('leaderboard');
+        leaderboardSectionNew.innerHTML = `
+            <h2>Papan Peringkat</h2>
+        `;
+        leaderboardSectionNew.appendChild(leaderboardTable);
+        document.body.appendChild(leaderboardSectionNew);
+
+        // Tambahkan event listener untuk tombol hapus
+        const deleteButtons = document.querySelectorAll('.delete-button');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const index = button.getAttribute('data-index');
+                // Hapus entri dari leaderboard
+                leaderboard.splice(index, 1);
+                // Simpan perubahan di localStorage
+                localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
+                // Tampilkan ulang papan peringkat
+                displayLeaderboard();
+            });
+        });
+    }
+
+    // Event listener untuk submit form kuis
+    const quizForm = document.getElementById('quizForm');
+    quizForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Mendapatkan nama pengguna dari input
+        const username = document.getElementById('username').value;
+
+        // Mendapatkan nilai jawaban dari radio button
+        const correctAnswers = ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'b']; // Jawaban untuk masing-masing pertanyaan
+        let userAnswers = [
+            document.querySelector('input[name="q1"]:checked')?.value,
+            document.querySelector('input[name="q2"]:checked')?.value,
+            document.querySelector('input[name="q3"]:checked')?.value,
+            document.querySelector('input[name="q4"]:checked')?.value,
+            document.querySelector('input[name="q5"]:checked')?.value,
+            document.querySelector('input[name="q6"]:checked')?.value,
+            document.querySelector('input[name="q7"]:checked')?.value,
+            document.querySelector('input[name="q8"]:checked')?.value,
+            document.querySelector('input[name="q9"]:checked')?.value,
+            document.querySelector('input[name="q10"]:checked')?.value,
+        ];
+
+        let score = 0;
+        for (let i = 0; i < correctAnswers.length; i++) {
+            if (userAnswers[i] === correctAnswers[i]) {
+                score += 10;
+            }
+        }
+
+        // Menampilkan hasil kuis
+        const quizResult = document.getElementById('quizResult');
+        quizResult.innerHTML = `<h3>Hasil Kuis untuk ${username}:</h3><p>Skor Anda: ${score}</p>`;
+
+        // Menyimpan dan menampilkan papan peringkat
+        const leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+        leaderboard.push({ username, score });
+        leaderboard.sort((a, b) => b.score - a.score); // Urutkan dari skor tertinggi ke terendah
+        localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
+        displayLeaderboard(); // Tampilkan ulang papan peringkat setelah pembaruan
+
+        // Bersihkan jawaban pengguna setelah submit
+        quizForm.reset();
+    });
+
+    // Panggil fungsi untuk menampilkan papan peringkat saat halaman dimuat
+    displayLeaderboard();
+</script>
+
+</body>
+</html>
